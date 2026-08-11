@@ -1,0 +1,25 @@
+{
+  "name": "trabajo_en_clase_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hectovargas/trabajo_en_clase_node.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hectovargas/trabajo_en_clase_node/issues"
+  },
+  "homepage": "https://github.com/Hectovargas/trabajo_en_clase_node#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
