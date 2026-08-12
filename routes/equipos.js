@@ -3,6 +3,7 @@ const router = express.Router();
 const { equipos } = require('../data');
 
 let nextId = 1;
+let nextJugadoresId = 1;
 
 router.get('/', (req,res) => {
     res.json(equipos);
@@ -26,7 +27,7 @@ router.post('/:id/jugadores', (req,res) => {
     const equipo = equipos.find(e => e.id == req.params.id);
     if(!equipo) return res.status(404).json({error: 'Equipo no encontrado'});
 
-    const jugador = {nombre: req.query.nombre, posicion: req.query.posicion};
+    const jugador = {id: nextJugadoresId++, nombre: req.body.nombre, posicion: req.body.posicion};
     equipo.jugadores.push(jugador);
     res.status(201).json(jugador);
 });
@@ -42,7 +43,7 @@ router.get('/:id/jugadores',(req,res) => {
 router.delete('/:id',(req,res) => {
     const index = equipos.findIndex(e => e.id == req.params.id);
     if (index === -1) return res.status(404).json({error: 'Equipo no encontrado'});
-    equipos.slice(index,1);
+    equipos.splice(index,1);
     res.status(204).send();
 });
 

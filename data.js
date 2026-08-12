@@ -1,10 +1,10 @@
 let equipos = [
   { id: 1, nombre: 'Jaguares', jugadores: [
-    { nombre: 'Heyden', posicion: 'Aldana' },
-    { nombre: 'kenny', posicion: 'Menjivar' }
+    { id: 1, nombre: 'Heyden', posicion: 'Aldana' },
+    { id: 2, nombre: 'kenny', posicion: 'Menjivar' }
   ]},
   { id: 2, nombre: 'Los antropicanos', jugadores: [
-    { nombre: 'Ruth', posicion: 'Reyes' }
+    { id: 3, nombre: 'Ruth', posicion: 'Reyes' }
   ]}
 ];
 
