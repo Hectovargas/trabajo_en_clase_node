@@ -9,7 +9,9 @@ let equipos = [
 ];
 
 let arbitros = [
-  { id: 1, nombre: 'Juan' }
+ {id: 1, nombre: 'Efrain Gomez'},
+ {id: 2, nombre: 'Pablo Montes'},
+ {id: 3, nombre: 'Jose Torres'}
 ];
 
 let torneos = [
@@ -17,7 +19,7 @@ let torneos = [
 ];
 
 let partidos = [
-  { id: 1, torneoId: 1, equipoLocalId: 1, equipoVisitanteId: 2, arbitroId: 1, resultado: null }
+  { id: 1, torneoId: 1, equipoLocalId: 1, equipoVisitanteId: 2, arbitroId: 1, resultado: null, fecha: '11/9/2026' }
 ];
 
 module.exports = { equipos, arbitros, torneos, partidos };

@@ -1,10 +1,7 @@
 const express =require('express');
 const app=express.Router();
-let arbitros = [
- {id: 1, nombre: 'Efrain Gomez'},
- {id: 2, nombre: 'Pablo Montes'}
- {id: 3, nombre: 'Jose Torres'}
-];
+const {arbitros}= require('../data');
+
 let idc=4;
 
 
