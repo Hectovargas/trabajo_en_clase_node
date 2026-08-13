@@ -4,6 +4,9 @@ app.use(express.json());
 
 app.use('/equipos', require('./routes/equipos'));
 
+const activityRouter = require('./activity');
+app.use('/api', activityRouter);
+
 app.get('/',(req,res) =>{
     res.send('sixseven');
 });
