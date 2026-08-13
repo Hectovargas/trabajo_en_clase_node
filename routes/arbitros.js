@@ -8,7 +8,7 @@ let idc=4;
 app.post('/',(req,res) => {
     const {nombre}=req.body;
 
-    const arbitro = {id=idc++, nombre=nombre.trim()};
+    const arbitro = {id: idc++, nombre: nombre.trim()};
     arbitros.push(arbitro);
     res.status(201).json({mensaje: 'Creado exitosamente'})
 });
@@ -55,7 +55,8 @@ app.delete('/:id',(req,res)=>{
     if(i==-1){
         res.status(404).json({error: `arbitro con ${id} no encontrado`});
     }
-    const eliminado=arbitros[index];
-    arbitros.splice(index,1);
+    const eliminado=arbitros[i];
+    arbitros.splice(i,1);
     res.json({msj: `Arbitro eliminado`})
 })
+module.exports = app;
